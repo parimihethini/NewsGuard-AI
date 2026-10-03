@@ -1,0 +1,25 @@
+{
+  "phase": "5",
+  "split_ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "random_seed": 42,
+  "max_words": 20000,
+  "max_len": 300,
+  "embedding_dim": 128,
+  "batch_size": 64,
+  "epochs_max": 5,
+  "epochs_actual": 5,
+  "early_stopping": {
+    "monitor": "val_loss",
+    "patience": 2
+  },
+  "uncertainty_policy": {
+    "decision_threshold": 0.3,
+    "uncertain_low": 0.4,
+    "uncertain_high": 0.6,
+    "calibration": "threshold selected on val set via max macro-F1 grid search"
+  }
+}

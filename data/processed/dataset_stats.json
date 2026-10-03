@@ -1,0 +1,62 @@
+{
+  "raw": {
+    "fake_rows": 23481,
+    "real_rows": 21417,
+    "total_rows": 44898
+  },
+  "removed": {
+    "empty_or_trivial": 0,
+    "headline_only_kept": 631,
+    "exact_duplicates": 5795,
+    "normalized_duplicates": 3,
+    "conflicting_label_rows": 0,
+    "conflicting_label_keys": 0,
+    "total_removed": 5798
+  },
+  "clean_total": 39100,
+  "clean_by_label": {
+    "0": 21195,
+    "1": 17905
+  },
+  "splits": {
+    "train": {
+      "total": 27370,
+      "by_label": {
+        "0": 14837,
+        "1": 12533
+      }
+    },
+    "val": {
+      "total": 5865,
+      "by_label": {
+        "0": 3179,
+        "1": 2686
+      }
+    },
+    "test": {
+      "total": 5865,
+      "by_label": {
+        "0": 3179,
+        "1": 2686
+      }
+    }
+  },
+  "leakage_check": {
+    "train_val_overlap": 0,
+    "train_test_overlap": 0,
+    "val_test_overlap": 0,
+    "leakage_free": true
+  },
+  "tokenizer": {
+    "fit_on": "training_text_only",
+    "vocab_after_train_fit": 95782,
+    "vocab_after_valtest_transform": 95782,
+    "vocabulary_unchanged": true,
+    "saved_path": "C:\\Users\\yaswa\\Downloads\\advanced-fake-news-detection-hybrid-deep-learning-xai-main\\advanced-fake-news-detection-hybrid-deep-learning-xai-main\\models\\tokenizer_v2.pkl"
+  },
+  "reuters_artifact": {
+    "note": "Reuters preserved in main dataset. Controlled experiment deferred to Phase 6.",
+    "real_text_contains_reuters_pct": 99.82,
+    "fake_text_contains_reuters_pct": 1.2
+  }
+}

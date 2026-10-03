@@ -1,0 +1,185 @@
+{
+  "phase": "5",
+  "model_name": "Hybrid_CNN_BiLSTM_v2",
+  "model_path": "C:\\Users\\yaswa\\Downloads\\advanced-fake-news-detection-hybrid-deep-learning-xai-main\\advanced-fake-news-detection-hybrid-deep-learning-xai-main\\models\\hybrid_model_v2.h5",
+  "tokenizer_path": "C:\\Users\\yaswa\\Downloads\\advanced-fake-news-detection-hybrid-deep-learning-xai-main\\advanced-fake-news-detection-hybrid-deep-learning-xai-main\\models\\tokenizer_v2.pkl",
+  "baseline_model_path": "C:\\Users\\yaswa\\Downloads\\advanced-fake-news-detection-hybrid-deep-learning-xai-main\\advanced-fake-news-detection-hybrid-deep-learning-xai-main\\models\\hybrid_model.h5",
+  "dataset_source": "Phase 4 processed CSVs (train/val/test)",
+  "train_samples": 27366,
+  "val_samples": 5865,
+  "test_samples": 5864,
+  "decision_threshold": 0.3,
+  "accuracy": 0.9991473396998636,
+  "precision": 0.9992548435171386,
+  "recall": 0.9988826815642458,
+  "f1_score": 0.9990687278822872,
+  "roc_auc": 0.9999887530072527,
+  "confusion_matrix": [
+    [
+      3177,
+      2
+    ],
+    [
+      3,
+      2682
+    ]
+  ],
+  "classification_report": {
+    "REAL": {
+      "precision": 0.9990566037735849,
+      "recall": 0.9993708713431897,
+      "f1-score": 0.999213712847932,
+      "support": 3179.0
+    },
+    "FAKE": {
+      "precision": 0.9992548435171386,
+      "recall": 0.9988826815642458,
+      "f1-score": 0.9990687278822872,
+      "support": 2685.0
+    },
+    "accuracy": 0.9991473396998636,
+    "macro avg": {
+      "precision": 0.9991557236453616,
+      "recall": 0.9991267764537177,
+      "f1-score": 0.9991412203651096,
+      "support": 5864.0
+    },
+    "weighted avg": {
+      "precision": 0.9991473735060954,
+      "recall": 0.9991473396998636,
+      "f1-score": 0.9991473273375711,
+      "support": 5864.0
+    }
+  },
+  "history": {
+    "loss": [
+      0.06182229146361351,
+      0.0054650502279400826,
+      0.0010578957153484225,
+      0.00031966291135177016,
+      3.800099148065783e-05
+    ],
+    "val_loss": [
+      0.007023647893220186,
+      0.005085314158350229,
+      0.0032563244458287954,
+      0.003767969086766243,
+      0.0036920395214110613
+    ],
+    "accuracy": [
+      0.9729591608047485,
+      0.9987941384315491,
+      0.9996345639228821,
+      0.9998903870582581,
+      1.0
+    ],
+    "val_accuracy": [
+      0.9986359477043152,
+      0.9984654784202576,
+      0.99931800365448,
+      0.99897700548172,
+      0.99897700548172
+    ]
+  },
+  "calibration": {
+    "best_threshold": 0.3,
+    "best_macro_f1_val": 0.999313134852533,
+    "calibration_grid": [
+      {
+        "threshold": 0.3,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.32,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.34,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.36,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.38,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.4,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.42,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.44,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.46,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.48,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.5,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.52,
+        "macro_f1": 0.999313134852533
+      },
+      {
+        "threshold": 0.54,
+        "macro_f1": 0.9989696426689153
+      },
+      {
+        "threshold": 0.56,
+        "macro_f1": 0.9989696426689153
+      },
+      {
+        "threshold": 0.58,
+        "macro_f1": 0.9987978815660211
+      },
+      {
+        "threshold": 0.6,
+        "macro_f1": 0.9986261104143408
+      },
+      {
+        "threshold": 0.62,
+        "macro_f1": 0.9987978115866366
+      },
+      {
+        "threshold": 0.64,
+        "macro_f1": 0.9987978115866366
+      },
+      {
+        "threshold": 0.66,
+        "macro_f1": 0.9987978115866366
+      },
+      {
+        "threshold": 0.68,
+        "macro_f1": 0.9986260302723131
+      },
+      {
+        "threshold": 0.7,
+        "macro_f1": 0.9986260302723131
+      }
+    ],
+    "boundary_samples_0.40_0.60": 4,
+    "boundary_percent": 0.06820119352088662,
+    "note": "Threshold selected on validation set only. Test set was NOT used."
+  },
+  "safety": {
+    "raw_csvs_untouched": true,
+    "baseline_model_preserved": true,
+    "baseline_tokenizer_preserved": true,
+    "tokenizer_v2_refit": false,
+    "test_set_used_for_training": false,
+    "test_set_used_for_threshold": false
+  }
+}

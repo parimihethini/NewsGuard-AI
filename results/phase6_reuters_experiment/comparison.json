@@ -1,0 +1,158 @@
+{
+  "summary": {
+    "metric": [
+      "Accuracy",
+      "Precision (Macro)",
+      "Recall (Macro)",
+      "F1-Score (Macro)",
+      "ROC-AUC",
+      "REAL F1-Score",
+      "FAKE F1-Score",
+      "Mean Confidence",
+      "Boundary Samples [0.40-0.60] (%)",
+      "Training Time (s)",
+      "Vocabulary Size"
+    ],
+    "experiment_a_original": [
+      "99.81%",
+      "99.80%",
+      "99.82%",
+      "99.81%",
+      "1.0000",
+      "99.83%",
+      "99.80%",
+      "99.84%",
+      "0.03%",
+      "730.06s",
+      "95,782"
+    ],
+    "experiment_b_reuters_removed": [
+      "99.20%",
+      "99.18%",
+      "99.21%",
+      "99.19%",
+      "0.9994",
+      "99.26%",
+      "99.13%",
+      "99.60%",
+      "0.15%",
+      "808.89s",
+      "95,636"
+    ],
+    "absolute_difference": [
+      "-0.61%",
+      "-0.62%",
+      "-0.61%",
+      "-0.62%",
+      "-0.0005",
+      "-0.57%",
+      "-0.67%",
+      "-0.24%",
+      "+0.12%",
+      "+78.8s",
+      "-146"
+    ]
+  },
+  "experiment_a": {
+    "experiment_name": "experiment_a",
+    "model_file": "experiment_a_model.h5",
+    "tokenizer_file": "experiment_a_tokenizer.pkl",
+    "train_samples": 27370,
+    "val_samples": 5865,
+    "test_samples": 5865,
+    "training_time_seconds": 730.06,
+    "vocabulary_size": 95782,
+    "max_words_retained": 20000,
+    "max_seq_len": 300,
+    "embedding_dim": 128,
+    "calibrated_threshold": 0.3,
+    "test_metrics": {
+      "accuracy": 0.998124,
+      "precision_macro": 0.998041,
+      "recall_macro": 0.998183,
+      "f1_macro": 0.998111,
+      "precision_weighted": 0.998126,
+      "recall_weighted": 0.998124,
+      "f1_weighted": 0.998125,
+      "roc_auc": 0.999968,
+      "confusion_matrix": {
+        "tn_real_as_real": 3171,
+        "fp_real_as_fake": 8,
+        "fn_fake_as_real": 3,
+        "tp_fake_as_fake": 2683
+      },
+      "per_class": {
+        "REAL": {
+          "precision": 0.999055,
+          "recall": 0.997483,
+          "f1_score": 0.998269,
+          "support": 3179
+        },
+        "FAKE": {
+          "precision": 0.997027,
+          "recall": 0.998883,
+          "f1_score": 0.997954,
+          "support": 2686
+        }
+      },
+      "prediction_distribution": {
+        "mean_confidence": 0.9984,
+        "median_confidence": 1.0,
+        "std_confidence": 0.0207,
+        "boundary_count_0.40_0.60": 2,
+        "boundary_pct": 0.03
+      }
+    }
+  },
+  "experiment_b": {
+    "experiment_name": "experiment_b",
+    "model_file": "experiment_b_model.h5",
+    "tokenizer_file": "experiment_b_tokenizer.pkl",
+    "train_samples": 27370,
+    "val_samples": 5865,
+    "test_samples": 5865,
+    "training_time_seconds": 808.89,
+    "vocabulary_size": 95636,
+    "max_words_retained": 20000,
+    "max_seq_len": 300,
+    "embedding_dim": 128,
+    "calibrated_threshold": 0.42,
+    "test_metrics": {
+      "accuracy": 0.991986,
+      "precision_macro": 0.991808,
+      "recall_macro": 0.992059,
+      "f1_macro": 0.991931,
+      "precision_weighted": 0.991993,
+      "recall_weighted": 0.991986,
+      "f1_weighted": 0.991987,
+      "roc_auc": 0.999435,
+      "confusion_matrix": {
+        "tn_real_as_real": 3151,
+        "fp_real_as_fake": 28,
+        "fn_fake_as_real": 19,
+        "tp_fake_as_fake": 2667
+      },
+      "per_class": {
+        "REAL": {
+          "precision": 0.994006,
+          "recall": 0.991192,
+          "f1_score": 0.992597,
+          "support": 3179
+        },
+        "FAKE": {
+          "precision": 0.98961,
+          "recall": 0.992926,
+          "f1_score": 0.991266,
+          "support": 2686
+        }
+      },
+      "prediction_distribution": {
+        "mean_confidence": 0.996,
+        "median_confidence": 1.0,
+        "std_confidence": 0.0308,
+        "boundary_count_0.40_0.60": 9,
+        "boundary_pct": 0.15
+      }
+    }
+  }
+}

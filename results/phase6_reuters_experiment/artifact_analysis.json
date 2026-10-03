@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "experiment": "Phase 6 Reuters Source Artifact Experiment",
+    "date": "2026-10-03",
+    "cleaning_rule": "Conservative regex removing wire datelines (e.g. 'CITY (Reuters) -'), parenthetical '(Reuters)' wire tags, and editorial signoffs."
+  },
+  "split_statistics": {
+    "rule_description": "Conservative regex removing wire datelines (e.g. 'CITY (Reuters) -'), parenthetical '(Reuters)' wire tags, and editorial signoffs.",
+    "train": {
+      "total_records": 27370,
+      "real_total": 14837,
+      "fake_total": 12533,
+      "real_with_reuters_before": 14810,
+      "real_with_reuters_before_pct": 99.82,
+      "fake_with_reuters_before": 145,
+      "fake_with_reuters_before_pct": 1.16,
+      "real_records_modified": 14728,
+      "real_records_modified_pct": 99.27,
+      "fake_records_modified": 6,
+      "fake_records_modified_pct": 0.05,
+      "total_records_modified": 14734,
+      "total_records_modified_pct": 53.83,
+      "real_with_reuters_after": 3430,
+      "real_with_reuters_after_pct": 23.12,
+      "fake_with_reuters_after": 140,
+      "fake_with_reuters_after_pct": 1.12
+    },
+    "val": {
+      "total_records": 5865,
+      "real_total": 3179,
+      "fake_total": 2686,
+      "real_with_reuters_before": 3175,
+      "real_with_reuters_before_pct": 99.87,
+      "fake_with_reuters_before": 37,
+      "fake_with_reuters_before_pct": 1.38,
+      "real_records_modified": 3149,
+      "real_records_modified_pct": 99.06,
+      "fake_records_modified": 2,
+      "fake_records_modified_pct": 0.07,
+      "total_records_modified": 3151,
+      "total_records_modified_pct": 53.73,
+      "real_with_reuters_after": 752,
+      "real_with_reuters_after_pct": 23.66,
+      "fake_with_reuters_after": 37,
+      "fake_with_reuters_after_pct": 1.38
+    },
+    "test": {
+      "total_records": 5865,
+      "real_total": 3179,
+      "fake_total": 2686,
+      "real_with_reuters_before": 3172,
+      "real_with_reuters_before_pct": 99.78,
+      "fake_with_reuters_before": 27,
+      "fake_with_reuters_before_pct": 1.01,
+      "real_records_modified": 3153,
+      "real_records_modified_pct": 99.18,
+      "fake_records_modified": 0,
+      "fake_records_modified_pct": 0.0,
+      "total_records_modified": 3153,
+      "total_records_modified_pct": 53.76,
+      "real_with_reuters_after": 708,
+      "real_with_reuters_after_pct": 22.27,
+      "fake_with_reuters_after": 27,
+      "fake_with_reuters_after_pct": 1.01
+    }
+  },
+  "sample_transformations": [
+    {
+      "id": 1,
+      "label": "REAL",
+      "before": "(Reuters) - Former Los Angeles Mayor and former California State Assembly Speaker Antonio Villaraigosa on Thursday publi...",
+      "after": "Former Los Angeles Mayor and former California State Assembly Speaker Antonio Villaraigosa on Thursday publicly launched..."
+    },
+    {
+      "id": 3,
+      "label": "REAL",
+      "before": "BELFAST (Reuters) - Sinn Fein on Monday dismissed as unacceptable a bill proposed by a British Conservative Party lawmak...",
+      "after": "Sinn Fein on Monday dismissed as unacceptable a bill proposed by a British Conservative Party lawmaker to set a 10-year ..."
+    },
+    {
+      "id": 7,
+      "label": "REAL",
+      "before": "VIENNA (Reuters) - Russian Foreign Minister Sergei Lavrov said on Friday that the recognition of Jerusalem as Israel s c...",
+      "after": "Russian Foreign Minister Sergei Lavrov said on Friday that the recognition of Jerusalem as Israel s capital by the Unite..."
+    },
+    {
+      "id": 9,
+      "label": "REAL",
+      "before": "YOKOSUKA (Reuters) - The U.S. Navy s top officer on Tuesday said that vessels from eastern Pacific could be brought forw...",
+      "after": "The U.S. Navy s top officer on Tuesday said that vessels from eastern Pacific could be brought forward to reinforce U.S...."
+    },
+    {
+      "id": 11,
+      "label": "REAL",
+      "before": "BEIJING (Reuters) - When Donald Trump becomes U.S. president next month, one issue above all others could force his new ...",
+      "after": "When Donald Trump becomes U.S. president next month, one issue above all others could force his new administration to wo..."
+    }
+  ]
+}

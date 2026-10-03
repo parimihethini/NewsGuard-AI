@@ -1,0 +1,15 @@
+{
+  "random_seed": 42,
+  "split_ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "deduplication_strategy": "exact_title_text + normalized_whitespace_lowercase",
+  "conflict_strategy": "exclude_all_conflicting_records",
+  "empty_strategy": "remove_both_empty; keep_headline_only",
+  "tokenizer_strategy": "fit_on_train_only; transform_val_test",
+  "raw_csvs_unchanged": true,
+  "model_h5_unchanged": true,
+  "tokenizer_pkl_unchanged": true
+}
